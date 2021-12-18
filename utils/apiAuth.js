@@ -5,7 +5,7 @@ exports.generateToken = (user) => {
     { id: user._id },
     process.env.SECRET_KEY || 'somethingsecret',
     {
-      expiresIn: process.env.JWT_EXPIRES,
+      expiresIn: '3d',
     }
   );
 };
